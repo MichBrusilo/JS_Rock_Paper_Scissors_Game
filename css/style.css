@@ -1,4 +1,13 @@
+
+body {
+	background-color: #ff9f43;
+}
 .container {
-	margin: 10px;
-	padding: 10px;
+  margin: 10px;
+  padding: 10px;
+  
+}
+.btn-primary, .btn-danger, .btn-info{
+	border-color: white;
+	background-color: green;	
 }
