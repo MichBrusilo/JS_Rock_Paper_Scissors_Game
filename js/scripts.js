@@ -69,6 +69,12 @@ function newGame() {
 
 function playerPick(playerPick) {
     console.log(playerPick);
+    var computerPick = getComputerPick();
+
+    playerPickElem.innerHTML = playerPick;
+    computerPickElem.innerHTML = computerPick;
+
+    checkRoundWinner(playerPick, computerPick);
 }
 
 
@@ -77,14 +83,6 @@ function getComputerPick() {
     return possiblePicks[Math.floor(Math.random()*3)];
 }
 
-
-
-function playerPick(playerPick) {
-    var computerPick = getComputerPick();
-
-    playerPickElem.innerHTML = playerPick;
-    computerPickElem.innerHTML = computerPick;
-}
 
 function checkRoundWinner(playerPick, computerPick) {
     playerResultElem.innerHTML = "";
@@ -108,14 +106,6 @@ function checkRoundWinner(playerPick, computerPick) {
     setGameEnd();
 }
 
-function playerPick(playerPick) {
-    var computerPick = getComputerPick();
-
-    playerPickElem.innerHTML = playerPick;
-    computerPickElem.innerHTML = computerPick;
-
-    checkRoundWinner(playerPick, computerPick);
-}
 
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
